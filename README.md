@@ -1,0 +1,2 @@
+# solitaryCode.github.io
+blog
