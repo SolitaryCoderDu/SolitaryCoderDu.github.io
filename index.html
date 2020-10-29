@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Mozilla 酷毙了</h1>
     
-    <img src="images/firefox.png" alt="我的测试页面">
-
-    <p>我的猫咪脾气<strong>爆</strong>:)</p>
-
-    <p>Mozilla 是一个全球社区，这里聚集着来自五湖四海的</p>
-    <ul>
-        <li>技术人员</li>
-        <li>思考者</li>
-        <li>建造者</li>
-    </ul>
-    <p>我们致力于。。。。</p>
-    
-    <a href="https://www.mozilla.org/zh-CN/about/manifesto/" target="_blank">Mozilla 宣言</a>
-
-    <button>切换用户</button>
-
-    <script src="scripts/main.js"></script>
+    <canvas id="text" width="600" height="200" style="display: none;"></canvas>
+    <canvas id="stage" width="960" height="922"></canvas>
+    <form id="form" style="">
+        <input type="text" id="inputText" value="123456" style="display:none;">
+        <input type="submit" value="相爱天数">
+    </form>
+    <script>
+        function timeElapse(){
+            var date = new Date();
+            date.setFullYear(2015, 2, 7);// 2015,11,11
+            var current = new Date();
+            var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
+            var days = Math.floor(seconds / (3600 * 24));
+            document.getElementById('inputText').value = days;
+        }
+        timeElapse();
+    </script>
+    <script src="http://static.fengyunxiao.cn/nest/storys/record/js/EasePack.min.js"></script>
+    <script src="http://static.fengyunxiao.cn/nest/storys/record/js/TweenLite.min.js"></script>
+    <script src="http://static.fengyunxiao.cn/nest/storys/record/js/easeljs-0.7.1.min.js"></script>
+    <script src="http://static.fengyunxiao.cn/nest/storys/record/js/requestAnimationFrame.js"></script>
+    <script src="http://static.fengyunxiao.cn/nest/storys/record/js/index.js"></script>
 </body>
 </html>
